@@ -544,7 +544,7 @@ class UpdateFromAgis:
             templatesites = TemplateSite.objects.filter(site__name=queuename, template__description__contains=templatepattern)
             self._logger.debug('called get_template_pattern from site_has_ft, templatesites=%s' % (templatesites))
             if len(templatesites) == 0:
-                self._loger.warning('there is no functional test for template pattern %s' %(templatepattern))
+                self._logger.warning('there is no functional test for template pattern %s' %(templatepattern))
                 return False
         else:
             return True 
